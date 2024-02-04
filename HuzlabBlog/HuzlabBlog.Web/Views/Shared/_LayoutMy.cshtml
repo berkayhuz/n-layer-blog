@@ -1,0 +1,115 @@
+﻿@using HuzlabBlog.Service.Consts
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["HideFooter"] = false;
+}
+
+<section class="my-section">
+    <div class="main-container">
+        @if (User.IsInRole(RoleConsts.SuperAdmin) || User.IsInRole(RoleConsts.Admin))
+        {        
+        <div class="my-topbar">
+            <div class="my-topbar-dropdown">
+                <button onclick="toggleDropdown(this)" class="my-topbar-dropdown-btn">
+                    <ion-icon name="albums-outline"></ion-icon><span>Gönderiler</span>
+                </button>
+                <div class="my-topbar-dropdown-content m-t-d-c-1">
+                    <a href="#"><ion-icon name="list-outline"></ion-icon><span>Listele</span></a>
+                        <a asp-action="Add" asp-controller="Home" asp-area="My"><ion-icon name="add-outline"></ion-icon><span>Ekle</span></a>
+                        <a asp-action="DeletedPosts" asp-controller="Home" asp-area="My"><ion-icon name="trash-outline"></ion-icon><span>Çöp Kutusu</span></a>
+                </div>
+            </div>
+            <div class="my-topbar-dropdown">
+                <button onclick="toggleDropdown(this)" class="my-topbar-dropdown-btn">
+                    <ion-icon name="grid-outline"></ion-icon><span>Kategoriler</span>
+                </button>
+                <div class="my-topbar-dropdown-content m-t-d-c-2">
+                    <a href="#"><ion-icon name="list-outline"></ion-icon><span>Listele</span></a>
+                        <a asp-action="CreateCategory" asp-controller="Home" asp-area="My"><ion-icon name="add-outline"></ion-icon><span>Ekle</span></a>
+                    <a href="#"><ion-icon name="trash-outline"></ion-icon><span>Çöp Kutusu</span></a>
+                </div>
+            </div>
+            <div class="my-topbar-dropdown">
+                <button onclick="toggleDropdown(this)" class="my-topbar-dropdown-btn">
+                    <ion-icon name="people-outline"></ion-icon><span>Kullanıcılar</span>
+                </button>
+                <div class="my-topbar-dropdown-content m-t-d-c-3">
+                    <a href="#"><ion-icon name="list-outline"></ion-icon><span>Listele</span></a>
+                    <a href="#"><ion-icon name="close-outline"></ion-icon><span>Silinenler</span></a>
+                    <a href="#"><ion-icon name="alert-circle-outline"></ion-icon><span>Cezalılar</span></a>
+                </div>
+            </div>
+            <div class="my-topbar-dropdown">
+                <button onclick="toggleDropdown(this)" class="my-topbar-dropdown-btn">
+                    <ion-icon name="book-outline"></ion-icon><span>Sayfalar</span>
+                </button>
+                <div class="my-topbar-dropdown-content m-t-d-c-4">
+                    <a href="#"><ion-icon name="tv-outline"></ion-icon><span>Politikalar</span></a>
+                    <a href="#"><ion-icon name="documents-outline"></ion-icon><span>Yardım ve Destek</span></a>
+                    <a href="#"><ion-icon name="documents-outline"></ion-icon><span>Diğer</span></a>
+                </div>
+            </div>
+            <div class="my-topbar-dropdown">
+                <button onclick="toggleDropdown(this)" class="my-topbar-dropdown-btn">
+                    <ion-icon name="business-outline"></ion-icon><span>Yönetim</span>
+                </button>
+                <div class="my-topbar-dropdown-content m-t-d-c-5">
+                    <a href="#"><ion-icon name="tv-outline"></ion-icon><span>Medya Yönetimi</span></a>
+                    <a href="#"><ion-icon name="documents-outline"></ion-icon><span>Dosya Yönetimi</span></a>
+                </div>
+            </div>
+            <div class="my-topbar-dropdown">
+                <button onclick="toggleDropdown(this)" class="my-topbar-dropdown-btn">
+                    <ion-icon name="settings-outline"></ion-icon><span>Ayarlar</span>
+                </button>
+                    <div class="my-topbar-dropdown-content m-t-d-c-6">
+                    <a href="#"><ion-icon name="shield-outline"></ion-icon><span>SSL</span></a>
+                    <a href="#"><ion-icon name="information-outline"></ion-icon><span>Temel bilgiler</span></a>
+                    <a href="#"><ion-icon name="apps-outline"></ion-icon><span>API</span></a>
+                </div>
+            </div>
+        </div>
+        }
+        <div class="my-profile-area">
+            <div class="profile-sidebar">
+                <div class="profile-sidebar-title">
+                    <span>Profil</span>
+                </div>
+                <div class="profile-sidebar-list" role="listbox">
+                    <div role="listitem">
+                        <a asp-controller="Home" asp-area="My" asp-action="Index" class="profile-sidebar-listitem">
+                            <ion-icon name="home-outline"></ion-icon><span>Ana Sayfa</span>
+                        </a>
+                    </div>
+                    <div role="listitem">
+                        <a asp-controller="Home" asp-area="My" asp-action="PersonalInformation" class="profile-sidebar-listitem">
+                            <ion-icon name="person-outline"></ion-icon><span>Kişisel Bilgiler</span>
+                        </a>
+                    </div>
+                    <div role="listitem">
+                        <a asp-action="ChangePassword" asp-controller="Home" asp-area="My" class="profile-sidebar-listitem">
+                            <ion-icon name="lock-closed-outline"></ion-icon><span>Email & Şifre</span>
+                        </a>
+                    </div>
+                    <div role="listitem">
+                        <a href="notifications.html" class="profile-sidebar-listitem">
+                            <ion-icon name="notifications-outline"></ion-icon><span>Bildirimler</span>
+                        </a>
+                    </div>
+                    <div role="listitem">
+                        <a asp-action="Add" asp-controller="Home" asp-area="My" class="profile-sidebar-listitem">
+                            <ion-icon name="albums-outline"></ion-icon><span>Paylaş</span>
+                        </a>
+                    </div>
+                    <div role="listitem">
+                        <a href="#" class="profile-sidebar-listitem">
+                            <ion-icon name="link-outline"></ion-icon><span>Entegrasyon</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+</section>
+@RenderSection("Scripts", required: false)

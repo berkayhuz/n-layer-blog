@@ -1,0 +1,58 @@
+﻿@model List<ArticleDto>
+
+@if (Model != null && Model.Any())
+{
+    <section class="editor-choosed-section">
+        <div class="main-container">
+            <div class="blog-list-wrapper">
+                <div class="blog-list">
+                    @foreach (var article in Model)
+                    {
+                        <div role="listitem">
+                            <a href="post/@article.Slug" class="blog-list-item">
+                                @if (!string.IsNullOrWhiteSpace(article.Image?.FileName) && !string.IsNullOrWhiteSpace(article.Title))
+                                {
+                                    <img class="blog-main-image" src="~/Uploads/@article.Image.FileName" alt="@article.Title">
+                                }
+                                else
+                                {
+                                    <img class="blog-main-image" src="~/Uploads/slider3.jpg" alt="Resim veya Başlık Bulunamadı">
+                                }
+                                <div class="blog-meta">
+                                    @if (!string.IsNullOrWhiteSpace(article.Category?.Name))
+                                    {
+                                        <div class="category-text-style">
+                                            @article.Category.Name
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="category-text-style">
+                                            Kategori bulunamadı.
+                                        </div>
+                                    }
+                                    <div class="reading-time">
+                                        @article.CreatedDate.ToString("MMMM dd, yyyy")
+                                    </div><img src="https://assets-global.website-files.com/6577019a915bb98abc733614/65770613c4602911abe0fa5a_arrow.png"
+                                    loading="lazy" alt="" class="blog-meta-arrow">
+                                </div>
+                                @if (!string.IsNullOrWhiteSpace(article.Title))
+                                {
+                                    <h4 class="main-blog-title">
+                                        @article.Title
+                                    </h4>
+                                }
+                                else
+                                {
+                                    <h4 class="main-blog-title">
+                                        Başlık bulunamadı.
+                                    </h4>
+                                }
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+}

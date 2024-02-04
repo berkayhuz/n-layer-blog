@@ -1,0 +1,228 @@
+@media screen and (max-width:1300px) {
+    .huzlab-list-most-viewed {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .huzlab-list-item-most-viewed-img {
+        width: 350px;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    .text-title-s {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .huzlab-list-item-most-viewed-img {
+        width: 300px;
+    }
+
+    .huzlab-list-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .huzlab-list-item-most-viewed-img {
+        width: 250px;
+    }
+
+    box-items-section {
+        grid-template-columns: 1fr !important;
+    }
+
+    editor-choosed-section {
+        grid-column: span 2;
+    }
+
+    .instagram-images {
+        display: none;
+    }
+
+    .huzlab-footer-item-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        align-items: center;
+        margin: auto;
+    }
+
+    .huzlab-slide-item:nth-child(1) {
+        display: none;
+    }
+
+    .huzlab-slide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .huzlab-slide-item:nth-child(3) {
+        display: block;
+    }
+
+    .huzlab-slider video {
+        min-height: 200px;
+        max-height: 200px;
+        margin-right: 300px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .huzlab-list-item-most-viewed-img {
+        width: 200px;
+    }
+
+    .opa-0,
+    .cover-1,
+    .opa-1 {
+        opacity: 1 !important;
+    }
+
+    .huzlab-list-item-cover {
+        display: none;
+    }
+
+    .social-medias {
+        gap: 1rem;
+    }
+
+    .category-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .category-top-item {
+        height: 10vh;
+    }
+
+    .huzlab-banner {
+        display: none;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .huzlab-list-most-viewed {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .huzlab-list-item-most-viewed-img {
+        width: 200px;
+    }
+
+    .huzlab-list-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+        .huzlab-list-3 .huzlab-list-item-many-post:first-child {
+            grid-column: span 1;
+        }
+
+    .social-medias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .huzlab-footer {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .huzlab-footer-item:nth-child(1) {
+        place-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .huzlab-footer-item:nth-child(2) {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: center;
+        place-items: center;
+    }
+
+    .detail-page-post-img {
+        height: 30vh;
+    }
+
+    .huzlab-list-category-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .huzlab-list-category-title {
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .huzlab-list-item-most-viewed-img,
+    .huzlab-list-item-cover {
+        width: 180px;
+    }
+
+    .huzlab-list-4,
+    .huzlab-list-3,
+    .huzlab-list-2,
+    .huzlab-list-1 {
+        width:100%;
+        grid-template-columns: 1fr;
+    }
+
+    .huzlab-list-item-many-post-img {
+        height: 200px;
+    }
+    .huzlab-list-item-latest-post {
+        display: flex;
+        flex-direction: column;
+        height:300px;
+        width:100% !important;
+    }
+
+
+        .huzlab-list-item-latest-post .huzlab-list-item-content {
+            margin: 2rem 3rem 2rem 1.5rem;
+            width: 95%;
+        }
+
+    .all-cat-name {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .all-cat-img {
+        height: 20vh;
+    }
+
+    .huzlab-search-box-search-form input {
+        width: 300px;
+    }
+}
+
+
+@media screen and (max-width:440px) {
+
+    .huzlab-list-item-most-viewed-img,
+    .huzlab-list-item-cover {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .huzlab-list-most-viewed {
+        grid-template-columns: 1fr;
+    }
+
+    .huzlab-list-item-most-viewed img,
+    .huzlab-list-item-most-viewed {
+        width: 100%;
+    }
+}

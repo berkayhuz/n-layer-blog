@@ -1,0 +1,112 @@
+﻿@model UserProfileDto
+@{
+    ViewData["Title"] = "Kişisel Bilgiler";
+    Layout = "~/Views/Shared/_LayoutMy.cshtml";
+}
+
+<div class="profile-dashboard">
+    <div class="profile-dashboard-top">
+        <span class="profile-dashboard-title">Kişisel Bilgiler</span>
+    </div>
+    <div class="profile-dashboard-form-box">
+        <form asp-controller="Home" asp-action="PersonalInformation" class="profile-dashboard-edit-profile-form" method="POST" enctype="multipart/form-data">
+            <div class="profile-dashboard-edit-profile profile-dashboard-edit-profile-photo">
+                <label for="file-input">
+                    <input type="file" asp-for="Photo" id="file-input" accept="image/*" aria-describedby="photoInputHelp" required onchange="showImage(this)">
+                    <div class="profile-dashboard-edit-profile-photo-overlay">
+                        <ion-icon name="camera-outline"></ion-icon>
+                    </div>
+                    <img id="selected-image"
+                         src="~/Uploads/@Model.Image.FileName"
+                         alt="">
+                </label>
+            </div>
+            <div class="profile-dashboard-edit-profile-inputs">
+                <div class="profile-dashboard-edit-profile-input-box">
+                    <label asp-for="FirstName">
+                        <span asp-validation-for="FirstName">İsim</span>
+                        <input asp-for="FirstName" auto-focus="" type="text" placeholder="Berkay" required>
+                    </label>
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box">
+                    <label asp-for="LastName">
+                        <span asp-validation-for="LastName">Soyisim</span>
+                        <input asp-for="LastName" auto-focus="" type="text" placeholder="Huz" required>
+                    </label>
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box">
+                    <label asp-for="Email">
+                        <span asp-validation-for="Email">Email</span>
+                        <input asp-for="Email" type="text" placeholder="huzlab@huzlab.com" required>
+                    </label>
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box">
+                    <label>
+                        <span>Telefon Numarası</span>
+                        <input type="text" placeholder="+12345678901" required>
+                    </label>
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box">
+                    <label asp-for="Biography">
+                        <span asp-validation-for="Biography">Biyografi</span>
+                        <input asp-for="Biography" type="text" placeholder="Biyografi required">
+                    </label>
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box">
+                    <label asp-for="CurrentPassword">
+                        <span asp-validation-for="CurrentPassword">Mevcut parola</span>
+                        <input asp-for="CurrentPassword" type="password" placeholder="Mevcut parola" autofocus="" required>
+                    </label>
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box">
+                </div>
+                <div class="profile-dashboard-edit-profile-input-box profile-dashboard-edit-profile-input-box-submit">
+                    <div class="input-void"></div>
+                    <label>
+                        <input type="submit" value="Kaydet">
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="profile-dashboard-bottom">
+        <div class="profile-dashboard-bottom-title">
+            <h3>Hesabımı sil</h3>
+        </div>
+        <div class="profile-dashboard-bottom-desc">
+            <ion-icon name="alert-circle-outline"></ion-icon>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem delectus perferendis ab
+                obcaecati, ut error.
+            </p>
+        </div>
+        <div class="profile-dashboard-bottom-info">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui inventore incidunt libero
+                ex consectetur distinctio quae fugit cupiditate temporibus voluptate.
+            </p>
+        </div>
+        <div class="profile-dashboard-bottom-box">
+            <div class="profile-dashboard-bottom-box-item"></div>
+            <div class="profile-dashboard-bottom-box-item">
+                <a href="#">Hesabımı sil</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function showImage(input) {
+        var fileInput = input;
+        var img = document.getElementById('selected-image');
+
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                img.src = e.target.result;
+            };
+
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+</script>

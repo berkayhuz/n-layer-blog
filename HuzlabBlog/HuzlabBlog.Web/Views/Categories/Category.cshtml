@@ -1,0 +1,44 @@
+﻿@model ArticleListDto
+<section class="blog-section">
+    <div class="main-container">
+        <div class="blog-list-wrapper">
+            <div role="list" class="blog-list">
+                @foreach (var article in Model.Articles)
+                {
+                    <div role="listitem">
+                        <a asp-controller="Post" asp-action="Detail" asp-route-id="@article.Slug" class="blog-list-item">
+                            <img alt="Fotograf bulunamadı" src="~/Uploads/@article.Image.FileName" class="blog-main-image">
+                            <div class="blog-meta">
+                                @if (!string.IsNullOrWhiteSpace(article.Category.Name))
+                                {
+                                    <div class="category-text-style">@article.Category.Name</div>
+                                }
+                                else
+                                {
+                                    <div class="category-text-style">Kategori bulunamadı.</div>
+                                }
+                                @if (!string.IsNullOrWhiteSpace(article.Category.Name))
+                                {
+                                    <div class="reading-time">@article.CreatedDate.ToString("MMMM dd, yyyy")</div>
+                                }
+                                else
+                                {
+                                    <div class="reading-time">Tarih bulunamadı.</div>
+                                }
+                                <img src="https://assets-global.website-files.com/6577019a915bb98abc733614/65770613c4602911abe0fa5a_arrow.png" alt="Fotograf bulunamadı" class="blog-meta-arrow">
+                            </div>
+                            @if (!string.IsNullOrWhiteSpace(article.Title))
+                            {
+                                <h4 class="main-blog-title">@article.Title</h4>
+                            }
+                            else
+                            {
+                                <h4 class="main-blog-title">Başlık bulunamadı.</h4>
+                            }
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

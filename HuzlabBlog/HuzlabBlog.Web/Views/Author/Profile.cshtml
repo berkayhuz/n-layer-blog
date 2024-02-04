@@ -1,0 +1,162 @@
+﻿@model HuzlabBlog.Web.Models.UserProfileViewModel
+<section class="my-section">
+    <div class="main-container">
+        <div class="my-profile-area profile-area">
+            <div class="profile-dashboard-home">
+                <div class="profile-dashboard-home-top">
+                    <div class="profile-dashboard-home-cover profile-dashboard-home-cover-2">
+                        <img src="https://images.pexels.com/photos/1563355/pexels-photo-1563355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+
+                    </div>
+                </div>
+                <div class="profile-dashboard-home-bottom">
+                    <div class="profile-dashboard-home-user-image">
+                        <img src="~/Uploads/@Model.User.Image.FileName"
+                             alt="">
+                    </div>
+                    <div class="profile-dashboard-user-detail">
+                        <div class="profile-dashboard-home-user-name">
+                            <span>@Model.User.FirstName @Model.User.LastName</span>
+                        </div>
+                        <div class="profile-dashboard-home-user-bio">
+                            <span>@Model.User.Biography</span>
+                        </div>
+                    </div>
+                    <div class="profile-dashboard-user-more-section">
+                        <div class="p-d-u-m-s-box">
+                            @if (Model.Articles != null && Model.Articles.Any())
+                            {
+
+                                <div class="pdums-top">
+                                    <span class="pdums-title">Son gönderiler</span>
+                                </div>
+                                <div id="blog-list-profile" class="pdums-post-list" role="listbox">
+                                    @foreach (var article in Model.Articles)
+                                    {
+                                        <div role="listitem">
+                                            <a href="#" class="pdums-post-list-item">
+                                                <div class="pdums-post-list-item-top">
+                                                    <div class="pdums-post-list-item-top-item">
+                                                    </div>
+                                                    <div class="pdums-post-list-item-top-item">
+                                                        <a id="link" class="pdums-post-list-item-top-item-detail-link">
+                                                            <ion-icon name="ellipsis-horizontal"></ion-icon>
+                                                        </a>
+                                                        <div class="pdums-post-list-item-top-item-detail-buttons-dropdown-menu" id="pdums-post-list-item-top-item-detail-buttons-dropdown-menu" style="">
+                                                            <a href="#" class="pdums-post-list-item-top-item-detail-buttons-dropdown-menu-link">
+                                                                <ion-icon name="bookmark-outline"></ion-icon>
+                                                                <span>Gönderiyi kaydet</span>
+                                                            </a>
+                                                            <a href="#" class="pdums-post-list-item-top-item-detail-buttons-dropdown-menu-link">
+                                                                <ion-icon name="shield-outline"></ion-icon>
+                                                                <span>Gönderiyi Raporla</span>
+                                                            </a>
+                                                            <div class="pdums-post-list-item-top-item-detail-buttons-dropdown-menu-link-line"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pdums-post-list-item-bot">
+                                                    <div class="pdums-post-list-item-img">
+                                                    </div>
+                                                    <div class="pdums-post-list-item-content">
+                                                        <div class="pdums-post-list-item-title">
+                                                            <span>@article.Title</span>
+                                                        </div>
+                                                        <div class="pdums-post-list-item-minidesc">
+                                                            <p>
+                                                                @article.Title
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pdums-post-list-item-right">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                                <div role="navigation" aria-label="List" class="pagination pagination-profile">
+                                    @if (Model.PaginationInfo.TotalPages > 1)
+                                    {
+                                        @if (Model.PaginationInfo.CurrentPage > 1)
+                                        {
+                                            <a href="javascript:void(0);" onclick="loadPage(@Model.PaginationInfo.CurrentPage - 1)" class="pagination-previous previous">
+                                                <svg class="pagination-previous-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
+                                                </svg>
+                                                <div class="inline-block">Önceki</div>
+                                            </a>
+                                        }
+                                        @if (Model.PaginationInfo.CurrentPage < Model.PaginationInfo.TotalPages)
+                                        {
+                                            <a href="javascript:void(0);" onclick="loadPage(@Model.PaginationInfo.CurrentPage + 1)" class="pagination-next next">
+                                                <div class="inline-block">Sonraki</div>
+                                                <svg class="w-pagination-next-icon" height="12px" width="12px"
+                                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" transform="translate(0, 1)">
+                                                    <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M4 2l4 4-4 4"></path>
+                                                </svg>
+                                            </a>
+                                        }
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="pdums-non-post">
+                                    <ion-icon name="sad-outline"></ion-icon>
+                                    <span>Yazar henüz gönderi paylaşmadı</span>
+                                </div>
+                            }
+                        </div>
+                        <div class="p-d-u-m-s-box">
+                            <div class="pdums-top">
+                                <span class="pdums-title">Hakkında</span>
+                            </div>
+                            <div role="listbox" class="pdums-bottom">
+                                <div role="listitem">
+                                    <a href="" class="pdums-list-item">
+                                        <ion-icon name="git-network-outline"></ion-icon><span>
+                                            Back-end
+                                            Developer
+                                        </span>
+                                    </a>
+                                </div>
+                                <div role="listitem">
+                                    <a href="" class="pdums-list-item">
+                                        <ion-icon name="school-outline"></ion-icon><span>College Fınal</span>
+                                    </a>
+                                </div>
+                                <div role="listitem">
+                                    <a href="" class="pdums-list-item">
+                                        <ion-icon name="school-outline"></ion-icon><span>Uludag University</span>
+                                    </a>
+                                </div>
+                                <div role="listitem">
+                                    <a href="" class="pdums-list-item">
+                                        <ion-icon name="home-outline"></ion-icon><span>Turkey/Bursa/Mudanya</span>
+                                    </a>
+                                </div>
+                                <div role="listitem">
+                                    <a href="" class="pdums-list-item">
+                                        <ion-icon name="time-outline"></ion-icon><span>Ocak 2024'de katıldı</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function loadPage(page) {
+        var url = "@Url.Action("Profile", new { id = Model.User.Slug })" + "?page=" + page;
+        $.get(url, function (data) {
+            $("#blog-list-profile").html($(data).find("#blog-list-profile").html());
+            $(".pagination-profile").html($(data).find(".pagination-profile").html());
+        });
+    }
+</script>

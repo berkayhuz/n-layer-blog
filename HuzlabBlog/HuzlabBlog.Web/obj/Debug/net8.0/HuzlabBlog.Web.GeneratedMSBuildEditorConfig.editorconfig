@@ -1,0 +1,251 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HuzlabBlog.Web
+build_property.RootNamespace = HuzlabBlog.Web
+build_property.ProjectDir = C:\Users\bh\Desktop\githubrepolar\Huzlab31012024\HuzlabBlog\HuzlabBlog.Web\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\bh\Desktop\githubrepolar\Huzlab31012024\HuzlabBlog\HuzlabBlog.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Home/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcSG9tZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Home/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcSG9tZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Home/CreateCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcSG9tZVxDcmVhdGVDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Home/DeletedPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcSG9tZVxEZWxldGVkUG9zdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Home/PersonalInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcSG9tZVxQZXJzb25hbEluZm9ybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/Shared/Components/UserProfileWithArticles/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlclByb2ZpbGVXaXRoQXJ0aWNsZXNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Areas/My/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTXlcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Author/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Author/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Auth/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Auth/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Categories/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Error/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/Bgys.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XEJneXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/Cookies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XENvb2tpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/IntellectualProperty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XEludGVsbGVjdHVhbFByb3BlcnR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/Kvkk.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XEt2a2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFByaXZhY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/Security.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFNlY3VyaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/TermofUse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFRlcm1vZlVzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Policy/Termsandconditions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFRlcm1zYW5kY29uZGl0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Post/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Post/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Search/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/EditorChoosed/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRWRpdG9yQ2hvb3NlZFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/HomeCategory/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSG9tZUNhdGVnb3J5XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/Mixed/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWl4ZWRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/MovingText/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTW92aW5nVGV4dFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/RandomCategoryTwo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmFuZG9tQ2F0ZWdvcnlUd29cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/RandomCategory/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmFuZG9tQ2F0ZWdvcnlcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/UnderCategoryLastPosts/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVW5kZXJDYXRlZ29yeUxhc3RQb3N0c1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Components/UserHeader/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlckhlYWRlclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Includes/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluY2x1ZGVzXEZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Includes/MyFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluY2x1ZGVzXE15Rm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Includes/Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluY2x1ZGVzXE5hdmJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Items/Logo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEl0ZW1zXExvZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Items/LogoWhite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEl0ZW1zXExvZ29XaGl0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/Items/SearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEl0ZW1zXFNlYXJjaEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_ErrorHandlingFilterLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcnJvckhhbmRsaW5nRmlsdGVyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_ErrorLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcnJvckxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_LayoutNonAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROb25BdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_LayoutPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQb2xpY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4r5fwi4k3w
+
+[C:/Users/bh/Desktop/githubrepolar/Huzlab31012024/HuzlabBlog/HuzlabBlog.Web/Views/Shared/_LayoutMy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-cuj65liype

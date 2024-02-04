@@ -1,0 +1,47 @@
+﻿@model ArticleListDto
+
+<section class="search-section">
+    <div class="main-container">
+        <h1 class="heading">Search</h1>
+        <div class="search-text">Here's what we found for you.</div>
+        @await Html.PartialAsync("~/Views/Shared/Items/SearchForm.cshtml")
+        <div class="search-result-wrapper">
+            <div class="search-result-items">
+                @foreach (var article in Model.Articles)
+                {
+                     <div role="listitem">
+                        <a asp-action="Detail" asp-controller="Post" asp-route-id="@article.Id" class="blog-list-item">
+                            <img alt="Fotoğraf bulunamadı." src="~/Uploads/@article.Image.FileName" class="blog-main-image">
+                            <div class="blog-meta">
+                                <div class="category-text-style">@article.Category.Name</div>
+                                <img src="https://assets-global.website-files.com/6577019a915bb98abc733614/65770613c4602911abe0fa5a_arrow.png" alt="" class="blog-meta-arrow">
+                            </div>
+                            <h4 class="main-blog-title">@article.Title</h4>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+        <div role="navigation" aria-label="List" class="pagination">
+            @if (Model.ShowPrevious)
+            {
+                <a asp-route-query="@ViewBag.Query" asp-route-currentPage="@(Model.CurrentPage - 1)" class="pagination-previous previous">
+                    <svg class="pagination-previous-icon" height="12px" width="12px" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M8 10L4 6l4-4"></path>
+                    </svg>
+                    <div class="inline-block">Önceki</div>
+                </a>
+            }
+            @if (Model.ShowNext)
+            {
+                <a asp-route-query="@ViewBag.Query" asp-route-currentPage="@(Model.CurrentPage + 1)" class="pagination-next next">
+                    <div class="inline-block">Sonraki</div>
+                    <svg class="w-pagination-next-icon" height="12px" width="12px"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" transform="translate(0, 1)">
+                        <path fill="none" stroke="currentColor" fill-rule="evenodd" d="M4 2l4 4-4 4"></path>
+                    </svg>
+                </a>
+            }
+        </div>
+    </div>
+</section>

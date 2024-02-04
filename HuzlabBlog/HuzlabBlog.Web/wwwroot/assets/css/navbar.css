@@ -1,0 +1,213 @@
+﻿.huzlab-main-navbar {
+    display: flex;
+    padding: .5rem 0;
+    justify-content: space-between;
+}
+
+.splide {
+    padding: 0 .5rem;
+}
+
+.splide__slide {
+    padding: .5rem 0;
+}
+
+.navbar-dropdown-menu {
+    display: none;
+    background-color: var(--white);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 1rem;
+}
+
+.navbar-dropdown-button-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+}
+
+.navbar-dropdown-menu-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-dropdown-menu-item {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .nav-dropdown-menu-item a {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+.navbar-dropdown-menu-item {
+    width: 200px !important;
+}
+
+.nav-dropdown-menu-item form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+    .nav-dropdown-menu-item form label input {
+        width: 250px;
+        border: 1px solid var(--primary);
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    .nav-dropdown-menu-item form label button {
+        background-color: var(--primary);
+        padding: .5rem;
+        border-radius: .5rem;
+        width: 250px;
+        border: 1px solid var(--primary);
+        font-weight: 600;
+        color: var(--black);
+        font-size: .90rem;
+        cursor: pointer;
+    }
+
+        .nav-dropdown-menu-item form label button:hover {
+            background-color: var(--white);
+            border: 1px solid var(--primary);
+        }
+
+.navbar-dropdown-menu.active {
+    display: flex;
+}
+
+.huzlab-navbar-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: .5rem 0;
+}
+
+.huzlab-navbar-link-box {
+    display: flex;
+    gap: 1rem;
+}
+
+    .huzlab-navbar-link-box a {
+        font-size: 1.05rem;
+    }
+
+.huzlab-navbar-item-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+    .huzlab-navbar-item-icons a {
+        font-size: 1.5rem;
+    }
+
+.huzlab-navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.huzlab-section-navbar {
+    background-color: var(--primary);
+}
+
+.huzlab-section-navbar-in {
+    padding: .2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.huzlab-section-navbar-item {
+    display: flex;
+    gap: 1rem;
+    padding: .6rem 0;
+}
+
+.huzlab-section-navbar-item-link {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.huzlab-section-navbar-search-box form label {
+    display: flex;
+    border: 1px solid var(--white);
+    padding: .3rem .5rem;
+    border-radius: .5rem;
+}
+
+    .huzlab-section-navbar-search-box form label input {
+        background-color: transparent;
+        border: none;
+        width: 250px;
+        color: var(--white);
+        font-weight: 500;
+    }
+
+    .huzlab-section-navbar-search-box form label button {
+        color: var(--white);
+    }
+
+
+@media screen and (max-width:1300px) {
+    .huzlab-list-most-viewed {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .huzlab-list-item-most-viewed-img {
+        width: 350px;
+    }
+
+
+    .nav-container {
+        padding: .5rem .5rem 0 .5rem !important;
+    }
+}
+.huzlab-banner {
+    background-color: var(--primary);
+    text-align: center;
+    padding: .3rem;
+}
+
+    .huzlab-banner .huzlab-banner-text {
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+@media screen and (max-width:1150px) {
+    .huzlab-section-navbar-search-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    .huzlab-navbar-search-form > button {
+        display: block;
+    }
+
+    .huzlab-navbar-search-form label {
+        display: none;
+    }
+}
+
+@media screen and (max-width:830px) {
+
+    .huzlab-navbar-link-box {
+        display: none;
+    }
+}

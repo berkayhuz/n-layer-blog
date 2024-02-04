@@ -1,0 +1,110 @@
+﻿@using HuzlabBlog.Service.Consts
+@model ArticleAddDto
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "_LayoutMy";
+}
+
+
+
+<div class="profile-dashboard">
+    <div class="profile-dashboard-top">
+        <span class="profile-dashboard-title">Gönderi Paylaş</span>
+    </div>
+
+
+    <div class="profile-dashboard-form-box">
+        <form method="post" asp-controller="Home" asp-area="My" asp-action="add-post" enctype="multipart/form-data" class="profile-dashboard-edit-profile-form">
+            <div asp-validation-summary="ModelOnly"></div>
+            <section class="user-add-post-section">
+                <div class="user-add-post-body-div">
+                    <div class="user-select-category">
+                        <div class="user-select-category-box user-select-category-box">
+                            <span asp-for="CategoryId">Kategoriler:</span>
+                            <select asp-for="CategoryId" asp-items="@(new SelectList(Model.Categories,"Id","Name"))">
+                                <option value="deneme">deneme</option>
+                            </select>
+                        </div>
+                        @if (User.IsInRole(RoleConsts.SuperAdmin) || User.IsInRole(RoleConsts.Admin))
+                        {
+                            <div class="user-select-checkbox user-select-category-box">
+                                <span>Slayt</span>
+                                <label asp-for="IsSlider" class="checkbox">
+                                    <input asp-for="IsSlider" name="IsSlider" style="display: none;" type="checkbox">
+                                    <a class="true-or-false-button">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </label>
+                            </div>
+                            <div class="user-select-checkbox user-select-category-box">
+                                <span>Editör</span>
+                                <label asp-for="IsEditorChoosed" class="checkbox">
+                                    <input asp-for="IsEditorChoosed" name="IsEditorChoosed" style="display: none;" type="checkbox">
+                                    <a class="true-or-false-button">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </label>
+                            </div>
+                        }
+                        else
+                        {
+                        }
+                        
+                    </div>
+                    <div class="user-select-image">
+                        <label class="user-select-image-label">
+                            <input asp-for="Photo" accept="image/*" type="file" class="form-control" id="defaultFormControlInput" aria-describedby="defaultFormControlHelp" style="display: none;" onchange="displaySelectedImage(this);">
+                            <img alt=""
+                                 src="https://cdn-icons-png.flaticon.com/512/4211/4211763.png"
+                                 class="user-add-post-main-image" id="selectedImage">
+                            <div class="user-select-image-overlay">
+                                <ion-icon name="camera-outline"></ion-icon>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="user-add-post-text-div">
+                        <input maxlength="50" asp-for="Title" aria-describedby="defaultFormControlHelp"
+                               type="text" class="user-add-post-heading" placeholder="Başlık giriniz">
+                        <input maxlength="100" asp-for="MiniDescription"
+                               aria-describedby="defaultFormControlHelp" type="text"
+                               class="user-add-post-info" placeholder="Açıklama giriniz">
+                        <textarea asp-for="Content" id="customTextarea" style="min-height: 300px;" placeholder="İçerik" aria-describedby="defaultFormControlHelp" class="user-add-post-textarea"></textarea>
+                    </div>
+                    <div class="user-add-post-btn">
+                        <button type="submit">Paylaş</button>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#customTextarea',
+            plugins: 'link image bold',
+            toolbar: 'bold italic | link image',
+            height: 400,
+        });
+    </script>
+    <script>
+        function displaySelectedImage(input) {
+            var imgElement = document.getElementById('selectedImage');
+            var file = input.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgElement.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+}

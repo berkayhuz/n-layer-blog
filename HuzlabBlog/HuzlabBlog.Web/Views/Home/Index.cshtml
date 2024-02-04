@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Ana Sayfa";
+}
+@await Component.InvokeAsync("HomeCategory")
+@await Component.InvokeAsync("UnderCategoryLastPosts")
+@await Component.InvokeAsync("EditorChoosed")
+@await Component.InvokeAsync("MovingText")
+@await Component.InvokeAsync("RandomCategory")
+@await Component.InvokeAsync("RandomCategoryTwo")
+@await Component.InvokeAsync("Mixed")

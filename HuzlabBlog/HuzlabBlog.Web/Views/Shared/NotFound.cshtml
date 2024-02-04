@@ -1,0 +1,32 @@
+﻿@using HuzlabBlog.Service.Consts
+@{
+    Layout = "_ErrorLayout";
+    ViewData["Title"] = ViewData["StatusCode"] ?? 404;
+    var statusCode = ViewData["StatusCode"] ?? 404;
+    var errorTitle = ViewData["ErrorTitle"] as string ?? "Sayfa Bulunamadı";
+    var errorMessage = ViewData["ErrorMessage"] as string ?? "Aradığınız sayfa mevcut değil veya taşınmış olabilir.";
+}
+<div class="utility-wrapper">
+    <div class="utility-container">
+        <div class="text-mono">@statusCode</div>
+        <br />
+        <div class="utility-content">
+            <h1>@errorTitle<br></h1>
+            
+                @if (User.IsInRole(RoleConsts.SuperAdmin) || User.IsInRole(RoleConsts.Admin))
+                {
+                <p>
+                    @errorMessage
+                </p>
+                }
+                else
+                {
+                <p>
+                    Aradığınız sayfa mevcut değil veya taşınmış olabilir.
+                </p>
+            }
+            <a asp-controller="Home" asp-action="Index" style="color: #252525;"><ion-icon name="arrow-forward-outline"></ion-icon><p>Home</p></a>
+        </div>
+        <div></div>
+    </div>
+</div>

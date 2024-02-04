@@ -1,0 +1,52 @@
+﻿@model RandomCategoryViewModel
+
+
+@if (Model != null)
+{
+    <section class="random-category-section"></section>
+}
+else
+{
+    <section class="random-category-section">
+        <div class="main-container">
+            <div class="main-title">
+                @if (Model.Category != null)
+                {
+                    <h2 class="main-title-heading">
+                        @(Model.Category.Name)
+                    </h2>
+                }
+                else
+                {
+                    <h2 class="main-title-heading">
+                        Kategori
+                    </h2>
+                }
+                <div class="main-subtitle">kategorisine ait son haberler</div>
+            </div>
+            <div class="random-category-list-wrapper">
+                <div role="list" class="random-category-list">
+                    @if (Model != null && Model.Posts != null && Model.Posts.Any())
+                    {
+                        @foreach (var article in Model.Posts)
+                        {
+                            <div role="listitem" class="w-dyn-item">
+                                <a href="post/@article.Slug" class="random-category-item">
+                                    <img alt="" src="~/Uploads/@(article.Image.FileName)" class="random-category-image">
+                                    <div class="random-text-box">
+                                        <h4 class="random-category-heading" style="color: rgb(0, 0, 0);">
+                                            @(article.Title)
+                                        </h4>
+                                        <div class="random-category-time" style="color: rgb(0, 0, 0);">@article.CreatedDate.ToString("MMMM dd, yyyy")</div>
+                                    </div>
+                                    <div class="random-overlay" style="opacity: 0; display: block;"></div>
+                                </a>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+}
+

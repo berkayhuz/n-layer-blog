@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "_LayoutNonAuth";
+}
+@model RegisterDto
+
+<section class="auth-section">
+    <div class="auth-container">
+        <div class="content-container">
+            <div class="comp-logo-container">
+                <a href="#" class="comp-logo">
+                    @await Html.PartialAsync("~/Views/Shared/Items/Logo.cshtml")
+                </a>
+            </div>
+            <div class="comp-title">
+                <h1>Oku, yorum yap ve paylaş</h1>
+                <p>Yüzlerce ücretsiz makaleye erişmenize bir adım kaldı.</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <form id="registerForm" asp-action="Register" method="post">
+                <div class="form-box" role="alert">
+                    <div asp-validation-summary="All" class="form-box text-danger"></div>
+                </div>
+                <div style="grid-template-columns: 1fr 1fr;" class="form-box">
+                    <label>
+                        <div class="pass-area">
+                            <span>İsim</span>
+                            <div id="nameLenght" class="text-info"></div>
+                        </div>
+                        <input asp-for="FirstName" id="NameInput" type="text" placeholder="Adınızı giriniz" required="">
+                    </label>
+                    <label>
+                        <div class="pass-area">
+                            <span>Soyad</span>
+                            <div id="surNameLenght" class="text-info"></div>
+                        </div>
+                        <input asp-for="LastName" id="lastNameInput" type="text" placeholder="Soyisim giriniz" required="">
+                    </label>
+                </div>
+                <div class="form-box">
+                    <label>
+                        <div class="pass-area">
+                            <span>Kullanıcı adı</span>
+                            <div id="slugAvailability" class="text-info"></div>
+                        </div>
+                        <input asp-for="Slug" type="text" placeholder="Kullanıcıadı giriniz" required="">
+                    </label>
+                </div>
+                <div class="form-box">
+                    <label>
+                        <div class="pass-area">
+                            <span>Email</span>
+                            <div id="EmailControl" class="text-info"></div>
+                        </div>
+                        <input asp-for="Email" type="email" id="emailInput" placeholder="Email giriniz" oninput="validateEmail()" required="">
+                    </label>
+                </div>
+                <div class="form-box">
+                    <label>
+                        <div class="pass-area">
+                            <span>Parola</span>
+                            <div class="text-danger" id="passwordError"></div>
+                        </div>
+                        <input asp-for="Password" id="passwordInput" type="password" placeholder="********" required="">
+                    </label>
+                </div>
+                <div class="form-box">
+                    <label>
+                        <span>Tekrar giriniz</span>
+                        <input asp-for="ConfirmPassword" id="confirmPasswordInput" type="password" placeholder="********" required="">
+                    </label>
+                </div>
+                <div class=" form-check">
+                    <label class="checkbox path">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                            <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186">
+                            </path>
+                        </svg>
+
+                        <span>
+                            <a href="#">Gizlilik Politikasını</a> ve <a href="#">Kullanım Koşullarını </a>kabul ediyorum.
+                        </span>
+                    </label>
+                </div>
+                <div class=" form-check">
+                    <label class="checkbox path">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 21 21">
+                            <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186">
+                            </path>
+                        </svg>
+                        <span><a href="#">Abonelik Hizmeti</a> İle İlgili Güncellemeleri Almak İstiyorum.</span>
+                    </label>
+                </div>
+                <div class="form-box">
+                    <input type="submit" class="form-submit" value="Üye ol">
+                </div>
+                <div class="form-link">
+                    <div></div>
+                    <a asp-action="Login" asp-area="" asp-controller="Auth">Hesabın var mı?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

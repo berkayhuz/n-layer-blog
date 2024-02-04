@@ -1,0 +1,33 @@
+﻿<div class="main-container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Confirm Your Email</h2>
+            <p>Enter the verification code sent to your email address:</p>
+
+            @if (ViewData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @ViewData["SuccessMessage"]
+                </div>
+            }
+
+            @if (ViewData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @ViewData["ErrorMessage"]
+                </div>
+            }
+
+            <form method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <label for="emailVerificationCode">Verification Code:</label>
+                    <input type="text" class="form-control" id="emailVerificationCode" name="emailVerificationCode" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Confirm Email</button>
+            </form>
+        </div>
+    </div>
+</div>

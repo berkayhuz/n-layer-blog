@@ -1,0 +1,31 @@
+﻿@model ArticleDto
+
+<section class="single-post-section">
+    <div class="single-post-body-div">
+        <div class="category-and-reading-time">
+            <a asp-controller="Categories" asp-action="Category" asp-route-id="@Model.Category.Slug" class="category-text-style">@Model.Category.Name</a>
+            <div class="reading-time">@Model.CreatedDate.ToString("MMMM dd, yyyy")</div>
+        </div>
+        <img alt="" src="~/Uploads/@Model.Image.FileName" class="single-post-main-image">
+        <div class="single-post-text-div">
+            <h2 class="single-post-heading">@Model.Title</h2>
+            @Html.Raw(Model.Content)
+        </div>
+    </div>
+    <div class="single-post-author">
+        @if (Model.User.Image != null)
+        {
+            <img alt="" src="~/Uploads/@Model.User.Image.FileName" class="single-post-author-img">
+        }
+        else
+        {
+            <img style="width: 100px;height: 100px; object-fit:cover; border: 5px solid #fff;border-radius: 20px;" alt="foto bulunamadı" src="~/Uploads/1.jpg" />
+        }
+        <h5 class="singe-post-author-heading">@Model.User.FirstName @Model.User.LastName</h5>
+        <br>
+        <div class="singe-post-author-bio">
+            @Model.User.Biography
+        </div>
+        <a asp-controller="author" asp-action="profile" asp-route-id="@Model.User.Slug" class="button">Profile</a>
+    </div>
+</section>

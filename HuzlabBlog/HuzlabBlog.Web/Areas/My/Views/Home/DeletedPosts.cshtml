@@ -1,0 +1,47 @@
+﻿@model List<ArticleDto>
+@{
+    ViewData["Title"] = "Silinen Paylaşımlar";
+    Layout = "_LayoutMy";
+}
+<div class="profile-dashboard">
+    <div class="profile-dashboard-top">
+        <span class="profile-dashboard-title">Silinen Gönderiler</span>
+    </div>
+    <div class="profile-dashboard-form-box profile-dashboard-deleted-posts-table">
+        @if (Model.Any())
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Başlık</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Oluşturan</th>
+                        <th scope="col">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var article in Model)
+                    {
+                        <tr name="@article.Id">
+                            <td>@article.Title</td>
+                            <td>@article.Category.Name</td>
+                            <td>@article.CreatedBy</td>
+                            <td>
+                                <a data-id="@article.Id" asp-area="My" asp-controller="Home" asp-action="UndoDelete" asp-route-articleId="@article.Id">
+                                    <ion-icon name="arrow-redo-outline"></ion-icon>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="pdums-non-post">
+                <ion-icon name="happy-outline" role="img" class="md hydrated"></ion-icon>
+                <span>Silinen gönderi bulunamadı</span>
+            </div>
+        }
+    </div>
+</div>

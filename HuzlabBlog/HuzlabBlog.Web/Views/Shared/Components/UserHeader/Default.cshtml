@@ -1,0 +1,66 @@
+﻿@model UserHeaderDto
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <button class="header-menu-user-profile-button">
+            <img id="header-menu-dropdown-user-profile-button-click"
+                 src="~/Uploads/@Model.Image.FileName" alt="Kullanıcı Profil Fotoğrafı" />
+        </button>
+        <div id="header-menu-dropdown-user-profile-content" class="header-menu-dropdown-user-profile-content">
+            <div class="header-menu-dropdown-user-profile-content-top">
+                <span>@Model.FirstName @Model.LastName</span>
+            </div>
+            <div class="header-menu-dropdown-user-profile-content-bottom">
+                <div class="header-menu-dropdown-user-profile-content-bottom-list" role="listbox">
+                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                        <a asp-controller="Home" asp-action="Index" asp-area="My" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="person-outline"></ion-icon><span>Profil</span>
+                        </a>
+                    </div>
+                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                        <a href="#" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="bookmark-outline"></ion-icon><span>Kaydedilenler</span>
+                        </a>
+                    </div>
+                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                        <a asp-action="Add" asp-controller="Home" asp-area="My" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="create-outline"></ion-icon><span>Paylaş</span>
+                        </a>
+                    </div>
+                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                        <a href="#" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="notifications-outline"></ion-icon><span>Bildirmler</span>
+                        </a>
+                    </div>
+                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                        <a id="tema-link" href="#" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="moon-outline"></ion-icon><span>Tema</span>
+                        </a>
+                    </div>
+                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                        <a asp-controller="Auth" asp-area="" asp-action="Logout" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="log-out-outline"></ion-icon><span>Çıkış yap</span>
+                        </a>
+                    </div>
+                    <div class="theme-back d-none" role="listitem">
+                        <a href="#" id="theme-back"
+                           class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="arrow-back-outline"></ion-icon><span>Geri dön</span>
+                        </a>
+                    </div>
+                    <div class="theme-sun theme-select d-none" role="listitem">
+                        <a href="#" id="theme-sun" class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="sunny-outline"></ion-icon><span>Açık Tema</span>
+                        </a>
+                    </div>
+                    <div class="theme-moon theme-select d-none" role="listitem">
+                        <a href="#" id="theme-moon"
+                           class="header-menu-dropdown-user-profile-content-bottom-box">
+                            <ion-icon name="moon-outline"></ion-icon><span>Koyu Tema</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

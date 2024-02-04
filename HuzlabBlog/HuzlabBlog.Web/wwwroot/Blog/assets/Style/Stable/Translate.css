@@ -1,0 +1,163 @@
+﻿.translate-box {
+    margin: 10px;
+    border: 1px solid #00000023;
+    width: max-content;
+    padding: 0px 10px;
+    border-radius: 20px;
+}
+
+    .translate-box select {
+        border: none;
+        outline: none;
+        width: 100px;
+        cursor: pointer;
+        color: #252525
+    }
+
+        .translate-box select * {
+            color: #252525;
+        }
+
+        .translate-box select option:hover {
+            background-color: red;
+        }
+
+@media screen and (max-width:500px) {
+    .translate-box select {
+        width: 80px;
+    }
+}
+
+option[value=af],
+option[value=ay],
+option[value=bm],
+option[value=eu],
+option[value=bn],
+option[value=be],
+option[value=bho],
+option[value=bs],
+option[value=bg],
+option[value=my],
+option[value=jw],
+option[value=ceb],
+option[value=ny],
+option[value=cs],
+option[value=zh-TW],
+option[value=da],
+option[value=dv],
+option[value=doi],
+option[value=id],
+option[value=hy],
+option[value=eo],
+option[value=et],
+option[value=ee],
+option[value=fa],
+option[value=nl],
+option[value=tl],
+option[value=fi],
+option[value=cy],
+option[value=gl],
+option[value=gn],
+option[value=gu],
+option[value=ka],
+option[value=am],
+option[value=ht],
+option[value=ha],
+option[value=haw],
+option[value=hr],
+option[value=hi],
+option[value=hmn],
+option[value=xh],
+option[value=ig],
+option[value=iw],
+option[value=ilo],
+option[value=ga],
+option[value=gd],
+option[value=sv],
+option[value=is],
+option[value=km],
+option[value=kn],
+option[value=ca],
+option[value=kk],
+option[value=kk],
+option[value=ca],
+option[value=qu],
+option[value=ky],
+option[value=gom],
+option[value=co],
+option[value=kri],
+option[value=ku],
+option[value=ckb],
+option[value=lo],
+option[value=la],
+option[value=pl],
+option[value=lv],
+option[value=ln],
+option[value=lt],
+option[value=lb],
+option[value=hu],
+option[value=mai],
+option[value=mk],
+option[value=ml],
+option[value=ms],
+option[value=mi],
+option[value=mg],
+option[value=mt],
+option[value=mi],
+option[value=mni-Mtei],
+option[value=lus],
+option[value=mn],
+option[value=ne],
+option[value=no],
+option[value=or],
+option[value=om],
+option[value=uz],
+option[value=pa],
+option[value=ps],
+option[value=pt],
+option[value=ro],
+option[value=rw],
+option[value=sm],
+option[value=sa],
+option[value=nso],
+option[value=st],
+option[value=si],
+option[value=sn],
+option[value=sr],
+option[value=sd],
+option[value=sk],
+option[value=sl],
+option[value=so],
+option[value=su],
+option[value=sw],
+option[value=tg],
+option[value=ta],
+option[value=tt],
+option[value=th],
+option[value=te],
+option[value=ti],
+option[value=ts],
+option[value=tk],
+option[value=ak],
+option[value=uk],
+option[value=ur],
+option[value=ug],
+option[value=vi],
+option[value=yi],
+option[value=yo],
+option[value=el],
+option[value=zu],
+option[value=sq],
+option[value=fy],
+option[value=lg],
+option[value=mr],
+option[value=az],
+option[value=ar],
+option[value=zh-CN],
+option[value=ja],
+option[value=ko],
+option[value=as],
+option[value=tr],
+.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    display: none;
+}

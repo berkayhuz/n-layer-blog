@@ -1,0 +1,32 @@
+﻿@model CategoryAddDto
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "_LayoutMy";
+}
+<div class="profile-dashboard">
+    <div class="profile-dashboard-top">
+        <span class="profile-dashboard-title">Kategori Oluştur</span>
+    </div>
+    <div class="profile-dashboard-form-box">
+        <form method="post" asp-controller="Home" asp-area="My" asp-action="CreateCategory" enctype="multipart/form-data" class="profile-dashboard-edit-profile-form">
+            <div asp-validation-summary="ModelOnly"></div>
+            <section class="user-add-post-section">
+                <div class="user-add-post-body-div">
+                    @if (!string.IsNullOrEmpty(ViewBag.SuccessMessage))
+                    {
+                        <p class="add-category-info" style="border:1px solid green; color:green">@ViewBag.SuccessMessage</p>
+                    }
+
+                    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                    {
+                        <p class="add-category-info" style="border:1px solid red; color:red">@ViewBag.ErrorMessage</p>
+                    }
+                    <input style="padding:0 1rem;" maxlength="50" asp-for="Name" aria-describedby="defaultFormControlHelp" type="text" class="user-add-category" placeholder="Kategori adı giriniz">
+                    <div class="user-add-post-btn">
+                        <button type="submit">Oluştur</button>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+</div>

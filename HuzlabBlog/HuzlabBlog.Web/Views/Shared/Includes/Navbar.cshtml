@@ -1,0 +1,103 @@
+﻿
+<div class="header">
+    <div class="main-container">
+        <div class="header-inner">
+            <div class="header-top">
+                <a asp-controller="Home" asp-area="" asp-action="Index" class="logo">
+                    @await Html.PartialAsync("~/Views/Shared/Items/Logo.cshtml")
+                </a>
+                <nav class="main-menu">
+                    <div class="d-none">@await Html.PartialAsync("~/Views/Shared/Items/SearchForm.cshtml")</div>
+                </nav>
+                <div class="header-right-side">
+                    <button class="light-mode-button d-none" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="translate-box">
+                        <div id="google_element">
+                        </div>
+                    </div>
+                    @if (!ViewContext.RouteData.Values["controller"].ToString().Equals("Search", StringComparison.OrdinalIgnoreCase))
+                    {
+                        <button class="header-menu-button-box d-none-min">
+                            <ion-icon id="menuButton" class="header-menu-button" name="search-outline"></ion-icon>
+                        </button>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @await Component.InvokeAsync("UserHeader")
+                    }
+                    else
+                    {
+                        <button class="header-menu-user-profile-button header-menu-user-profile-button-non-auth">
+                            <ion-icon name="person-outline" id="header-menu-dropdown-user-profile-button-click"></ion-icon>
+                        </button>
+                        <div id="header-menu-dropdown-user-profile-content" class="header-menu-dropdown-user-profile-content header-menu-dropdown-user-profile-content-non-auth">
+                            <div class="header-menu-dropdown-user-profile-content-bottom">
+                                <div class="header-menu-dropdown-user-profile-content-bottom-list" role="listbox">
+                                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                                        <a asp-action="Register" asp-area="" asp-controller="Auth" class="header-menu-dropdown-user-profile-content-bottom-box header-menu-dropdown-user-profile-content-bottom-box-register">
+                                            <ion-icon name="person-add-outline"></ion-icon><span>Üye ol</span>
+                                        </a>
+                                    </div>
+                                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                                        <a asp-action="Login" asp-area="" asp-controller="Auth" class="header-menu-dropdown-user-profile-content-bottom-box">
+                                            <ion-icon name="log-in-outline"></ion-icon><span>Giriş yap</span>
+                                        </a>
+                                    </div>
+                                    <div class="header-user-dropdown-theme-d-none" role="listitem">
+                                        <a id="tema-link" href="#" class="header-menu-dropdown-user-profile-content-bottom-box">
+                                            <ion-icon name="moon-outline"></ion-icon><span>Tema</span>
+                                        </a>
+                                    </div>
+                                    <div class="theme-back d-none" role="listitem">
+                                        <a href="#" id="theme-back"
+                                           class="header-menu-dropdown-user-profile-content-bottom-box">
+                                            <ion-icon name="arrow-back-outline"></ion-icon><span>Geri dön</span>
+                                        </a>
+                                    </div>
+                                    <div class="theme-sun theme-select d-none" role="listitem">
+                                        <a href="#" id="theme-sun" class="header-menu-dropdown-user-profile-content-bottom-box">
+                                            <ion-icon name="sunny-outline"></ion-icon><span>Açık Tema</span>
+                                        </a>
+                                    </div>
+                                    <div class="theme-moon theme-select d-none" role="listitem">
+                                        <a href="#" id="theme-moon"
+                                           class="header-menu-dropdown-user-profile-content-bottom-box">
+                                            <ion-icon name="moon-outline"></ion-icon><span>Koyu Tema</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+            <div id="header-dropdown-menu" class="header-dropdown-menu header-bottom">
+                <div class="header-dropdown-top-menu">
+                    <form action="" class="header-search-box header-search-box-mobile">
+                        <label>
+                            <ion-icon name="search-outline"></ion-icon>
+                            <input type="search" placeholder="type something">
+                            <button type="submit">Search</button>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div id="header-dropdown-menu" class="header-dropdown-menu header-bottom">
+                <div class="header-dropdown-top-menu">
+                    <div class="header-dropdown-buttons">
+                        <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    @await Html.PartialAsync("~/Views/Shared/Items/SearchForm.cshtml")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

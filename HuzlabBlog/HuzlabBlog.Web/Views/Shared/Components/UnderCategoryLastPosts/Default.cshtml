@@ -1,0 +1,23 @@
+﻿@model List<ArticleDto>
+
+@if (Model != null && Model.Any())
+{
+    <section class="under-category-last-posts-section">
+        <div class="main-container">
+            <div class="latest-4-blog-posts-wrapper">
+                <div class="latest-4-blog-posts">
+                    @foreach (var article in Model)
+                    {
+                        <div role="listitem">
+                            <a href="post/@article.Slug" class="latest-blog-4-col-grid-item">
+                                <img alt="Article Image" src="~/Uploads/@(article.Image.FileName)" class="latest-blog-4-col-image">
+                                <h4 class="latest-blog-4-col-title">@article.Title</h4>
+                                <div class="latest-blog-4-col-publish-time">@article.CreatedDate.ToString("MMM dd, yyyy")</div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+}

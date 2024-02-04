@@ -1,0 +1,771 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tourney:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+
+:root {
+    --app-primary-color: #F09362;
+    --app-black-color: #1C232C;
+    --app-white-color: #fff;
+    --app-btn-padding: .65rem 2rem;
+    --app-btn-radius: 22px;
+    --app-btn-hover-color: rgba(0,0,0,.56);
+    --app-text-size-1: 10px;
+    --app-text-size-2: 12px;
+    --app-text-size-3: 14px;
+    --app-text-size-4: 16px;
+    --app-text-size-5: 18px;
+    --app-text-size-6: 20px;
+    --app-text-size-7: 22px;
+    --app-text-size-8: 24px;
+    --app-text-size-9: 26px;
+    --app-text-size-10: 27px;
+    --app-text-weight-1: 100;
+    --app-text-weight-2: 200;
+    --app-text-weight-3: 300;
+    --app-text-weight-4: 400;
+    --app-text-weight-5: 500;
+    --app-text-weight-6: 600;
+    --app-text-weight-7: 700;
+    --app-text-weight-8: 800;
+    --app-text-weight-9: 900;
+    --app-bx-shadow: 17px 20px 40px rgba(0,0,0,.21);
+}
+
+input {
+    outline: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+a {
+    color: var(--app-black-color);
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.app-wrapper {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
+    .app-wrapper > * {
+        justify-self: center;
+    }
+
+.app-button {
+    background-color: var(--app-black-color);
+    color: var(--app-white-color);
+    padding: var(--app-btn-padding);
+    border-radius: var(--app-btn-radius);
+    font-size: var(--app-text-size-6);
+    font-weight: var(--app-text-weight-6);
+    line-height: 20px;
+    text-align: center;
+}
+
+    .app-button:hover {
+        background-color: var(--app-btn-hover-color);
+    }
+
+.app-logo {
+    width: 500px;
+}
+
+.app-desc {
+    width: 30%;
+    color: var(--app-black-color);
+    font-size: var(--app-text-size-10);
+    text-align: center;
+    font-weight: 600;
+    line-height: 44px;
+    -webkit-margin-before: 40px;
+    margin-block-start: 40px;
+    -webkit-margin-after: 20px;
+    margin-block-end: 20px;
+    max-inline-size: 478px;
+}
+
+.apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.app-footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1040px;
+}
+
+.app-footer-box * {
+    color: #424245c0;
+    font-size: var(--app-text-size-2);
+    font-weight: var(--app-text-weight-5);
+}
+
+.app-footer-box a {
+    border-right: 1px solid #4242454d;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+    .app-footer-box a:last-child {
+        border: none;
+    }
+
+.huzlab-main-navbar {
+    display: flex;
+    padding: .5rem 0;
+    justify-content: space-between;
+}
+
+.splide {
+    padding: 0 .5rem;
+}
+
+.splide__slide {
+    padding: .5rem 0;
+}
+
+.navbar-dropdown-menu {
+    display: none;
+    background-color: var(--white);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 1rem;
+}
+
+.navbar-dropdown-button-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+}
+
+.navbar-dropdown-menu-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-dropdown-menu-item {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .nav-dropdown-menu-item a {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+.navbar-dropdown-menu-item {
+    width: 200px !important;
+}
+
+.nav-dropdown-menu-item form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+    .nav-dropdown-menu-item form label input {
+        width: 250px;
+        border: 1px solid var(--primary);
+        padding: .5rem;
+        border-radius: .5rem;
+    }
+
+    .nav-dropdown-menu-item form label button {
+        background-color: var(--primary);
+        padding: .5rem;
+        border-radius: .5rem;
+        width: 250px;
+        border: 1px solid var(--primary);
+        font-weight: 600;
+        color: var(--black);
+        font-size: .90rem;
+        cursor: pointer;
+    }
+
+        .nav-dropdown-menu-item form label button:hover {
+            background-color: var(--white);
+            border: 1px solid var(--primary);
+        }
+
+.navbar-dropdown-menu.active {
+    display: flex;
+}
+
+.huzlab-navbar-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: .5rem 0;
+}
+
+.huzlab-navbar-link-box {
+    display: flex;
+    gap: 1rem;
+}
+
+    .huzlab-navbar-link-box a {
+        font-size: 1.05rem;
+    }
+
+.huzlab-navbar-item-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+    .huzlab-navbar-item-icons a {
+        font-size: 1.5rem;
+    }
+
+.huzlab-navbar {
+    display: flex;
+    flex-direction: column;
+}
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tourney:wght@100&display=swap');
+
+:root {
+    --primary: #F09362;
+    --secondary: #5C5CE0;
+    --blue-thin: #E4EDEE;
+    --third: #9bc3ca;
+    --black: #1b222c;
+    --gray: #404850;
+    --white: #fff;
+    --cream: #f3f4f2;
+    --peach: #fdd9c9;
+    --primary-gradient: linear-gradient(to right, #f09362, #f39661, #f69960, #f99c5f, #fc9f5e, #fca15b, #fca458, #fca655, #faa94f, #f7ac4a, #f4af44, #f0b23f);
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+
+input {
+    outline: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    display: block;
+}
+
+.icon-arrow-right {
+}
+
+.icon-category {
+    width: 30px;
+    height: 30px;
+    color: var(--secondary);
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.huzlab-logo {
+    width: 130px;
+    height: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.text-bold {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.text-bold-title {
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: color .2s;
+    gap: 0.3rem;
+}
+
+.text-title-gray {
+    margin-top: 5px;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.text-title-gray-m {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+
+.text-bold-gray {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.fz-s {
+    font-size: 0.9rem;
+}
+
+.text-title {
+    margin-bottom: 8px;
+    font-size: 1.70em;
+    color: var(--black);
+    text-transform: lowercase;
+}
+
+.text-title-s {
+    color: var(--black);
+    line-height: -10px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.text-title-s-m {
+    color: var(--white);
+    line-height: -10px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+nav {
+    background-color: var(--white);
+}
+
+.relative {
+    position: relative;
+}
+
+.huzlab-flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.absolute-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absolute-cover {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+}
+
+.absolute-bl {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+}
+
+.huzlab-title {
+    padding: .5rem 0 1rem 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mtb-4rem {
+    margin: 4rem auto;
+}
+
+.mt-4rem {
+    margin-top: 4rem;
+}
+
+.text-black-color {
+    color: var(--black) !important;
+}
+
+.text-white-color {
+    color: var(--white) !important;
+}
+
+box-items-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+editor-choosed-section {
+    grid-column: span 2;
+}
+
+.text-subs-box-h1 {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.p-1-2 {
+    padding: 1rem 2rem;
+}
+
+.border-bottom-thin {
+    border-bottom: 1px solid #00000027;
+}
+
+.absolute-tr {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--blue-thin);
+    color: var(--primary);
+    font-weight: 600;
+    padding: .3rem .6rem;
+    border-radius: .75rem;
+}
+
+.banner {
+    background-color: var(--secondary);
+    width: 100%;
+    height: 320px;
+    margin: 3rem 0 0 0;
+    padding: .5rem 0 1.5rem 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-title {
+    font-size: 2.75rem !important;
+    margin-top: -40px;
+    margin-bottom: 15px;
+    color: var(--white);
+    text-align: center;
+}
+
+.banner-btn-box {
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.banner .huzlab-button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    background-color: transparent !important;
+    border: 2.5px solid var(--white);
+    font-size: .95rem !important;
+}
+
+
+    .banner .huzlab-button:hover {
+        background-color: var(--primary) !important;
+    }
+
+.banner .huzlab-button-secondary:hover {
+    background-color: var(--third) !important;
+}
+
+.subs-banner {
+    background-color: var(--peach);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.subs-banner-title {
+    letter-spacing: -.05em;
+    margin-top: 50px;
+    font-size: 50px;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+.subs-banner-desc {
+    letter-spacing: -.03em;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.subs-banner button {
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    letter-spacing: -.03em;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    padding: 14px 30px;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5em;
+    transition: all .3s;
+    gap: 0.3rem;
+}
+
+    .subs-banner button:hover {
+        border: 2px solid var(--white);
+        background-color: transparent;
+    }
+
+.huzlab-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    .huzlab-subscribe-form input {
+        margin: 1rem 0 .5rem 0;
+        border: none;
+        padding: .5rem;
+        font-weight: 600;
+        border-radius: .5rem;
+    }
+
+.instagram-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.social-medias {
+    display: flex;
+    gap: 4rem;
+}
+
+    .social-medias a {
+        font-size: 1.5rem;
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+
+        .social-medias a ion-icon {
+            transform: rotate(45deg);
+            font-size: 2rem;
+        }
+
+        .social-medias a:hover {
+            color: var(--primary);
+        }
+
+.instagram-images {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 4rem;
+}
+
+.instagram-img:first-child {
+    grid-row: span 2;
+    height: 100%;
+    height: 675px;
+}
+
+.instagram-img {
+}
+
+    .instagram-img img {
+        height: 100%;
+        border-radius: .75rem;
+    }
+
+.insta-icon {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000077;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: .75rem;
+    display: flex;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 300;
+    gap: .5rem;
+}
+
+.instagram-img:hover .insta-icon {
+    opacity: 1;
+}
+
+.huzlab-footer {
+    margin-top: 5rem;
+    padding: 80px 0;
+    background-color: var(--black);
+}
+
+.huzlab-footer-item-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.huzlab-footer .huzlab-description {
+    color: var(--white);
+    font-size: 0.8rem;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.huzlab-footer-link-title {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid #cbcbcb48;
+    padding-bottom: 5px;
+}
+
+.huzlab-footer-link-box {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.huzlab-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+    .huzlab-footer-links a {
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+.huzlab-footer-item:nth-child(2) {
+    display: flex;
+    gap: 4rem;
+}
+.huzlab-banner {
+    background-color: var(--primary);
+    text-align: center;
+    padding: .3rem;
+}
+
+    .huzlab-banner .huzlab-banner-text {
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+
+@media screen and (max-width:768px) {
+    .app-logo {
+        width: 300px;
+    }
+
+    .app-button {
+        font-size: var(--app-text-size-3);
+    }
+
+    .app-desc {
+        margin-top: 0;
+        width: 80%;
+        font-size: var(--app-text-size-4);
+        line-height: 20px;
+    }
+
+    .app-footer {
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+    }
+}

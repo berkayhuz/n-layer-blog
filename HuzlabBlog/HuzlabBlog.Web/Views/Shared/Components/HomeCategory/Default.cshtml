@@ -1,0 +1,23 @@
+﻿@model List<CategoryDto>
+@if (Model != null && Model.Any())
+{
+    <section class="home-category">
+        <div class="main-container">
+            <div class="home-category-list-wrapper">
+                <div class="home-category-list">
+                    @foreach (var category in Model)
+                    {
+                        <div role="listitem" class="home-category-item">
+                            <a href="category/@category.Slug" class="category-grid-item">
+                                <img alt="" src="https://assets-global.website-files.com/65770570a2946a7c83492a9c/65782fe7dec1e4824058c1d2_post16.jpg" class="blog-category-main-image">
+                                <div class="gradient-overlay"></div>
+                                <div class="category-name">@category.Name</div>
+                                <img src="https://assets-global.website-files.com/6577019a915bb98abc733614/657706245d964540c2260550_readmore.png" alt="" class="blog-arrow">
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+}

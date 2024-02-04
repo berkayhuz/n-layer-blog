@@ -1,0 +1,100 @@
+﻿<div class="footer">
+    <div class="inner-footer">
+        <div class="main-container">
+            <div class="footer-box">
+                <a asp-controller="Home" asp-area="" asp-action="Index" class="footer-logo">
+                    @await Html.PartialAsync("~/Views/Shared/Items/Logo.cshtml")
+                </a>
+                <div class="footer-top">
+                    <div class="footer-grid-item">
+                        <h4 class="footer-heading no-translate">Huzlab</h4>
+                        <a asp-area="" asp-controller="home" asp-action="Index">ANA SAYFA</a>
+                        <a asp-area="" asp-controller="categories" asp-action="Index">KATEGORİLER</a>
+                        <a asp-area="" asp-controller="post" asp-action="Index">GÖNDERİLER</a>
+                        <a asp-area="" asp-controller="search" asp-action="Index">SİTEDE ARA</a>
+                    </div>
+                    <div class="footer-grid-item">
+                        <h4 class="footer-heading">BİZ KİMİZ</h4>
+                        <a href="privacy">Güvenlik Merkezi</a>
+                        <a href="privacy">Yardım ve Destek</a>
+                        <a href="faq">Sıkça Sorulan Sorular</a>
+                        <a href="about-us">Hakkımızda</a>
+                        <a href="contact">İletişim</a> 
+                    </div>
+                    <div class="footer-grid-item">
+                        <h4 class="footer-heading">Yardım</h4>
+                        <a asp-action="bgys" asp-controller="Policy" asp-area="">BGYS Politikası</a>
+                        <a asp-action="cookies" asp-controller="Policy" asp-area="">Çerez Politikası</a>
+                        <a asp-action="kvkk" asp-controller="Policy" asp-area="">KVKK Aydınlatma Metni</a>
+                        <a asp-action="security" asp-controller="Policy" asp-area="">Güvenlik Politikası</a>
+                        <a asp-action="termofuse" asp-controller="Policy" asp-area="">Kullanım Koşulları</a>
+                        <a asp-action="termsandconditions" asp-controller="Policy" asp-area="">Hüküm ve Koşullar</a>
+                        <a asp-action="intelectualproperty" asp-controller="Policy" asp-area="">Fikri Mülkiyet Politikası</a>
+                        <a asp-action="privacy" asp-controller="Policy" asp-area="">Gizlilik Politikası</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-grid">
+                        <div class="footer-grid-item">
+                            <h4 class="footer-heading">İLETİŞİM</h4>
+                            <a href="mailto:huzberkay@icloud.com" class="footer-email-and-phone">
+                                <ion-icon name="mail-outline" class="footer-emailphone-icon"></ion-icon>
+                                <div class="text-block">huzberkay@icloud.com</div>
+                            </a><a href="tel:+905438018574" class="footer-email-and-phone last-phone">
+                                <ion-icon name="call-outline" class="footer-emailphone-icon"></ion-icon>
+                                <div class="text-block">+90 543 801 85 74</div>
+                            </a>
+                        </div>
+
+                        <div class="footer-grid-item">
+                            <h4 class="footer-heading">SOSYAL MEDYA</h4>
+                            <div class="foot-socials">
+                                <a href="http://www.facebook.com" target="_blank" class="social-link ">
+                                    <ion-icon name="logo-instagram" class="foot-social-link"></ion-icon>
+                                </a>
+                                <a href="http://www.facebook.com" target="_blank" class="social-link ">
+                                    <ion-icon name="logo-twitter" class="foot-social-link"></ion-icon>
+                                </a>
+                                <a href="http://www.facebook.com" target="_blank" class="social-link ">
+                                    <ion-icon name="logo-github" class="foot-social-link"></ion-icon>
+                                </a>
+                                <a href="http://www.facebook.com" target="_blank" class="social-link ">
+                                    <ion-icon name="logo-linkedin" class="foot-social-link"></ion-icon>
+                                </a>
+                                <a href="http://www.facebook.com" target="_blank" class="social-link ">
+                                    <ion-icon name="logo-pinterest" class="foot-social-link"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer-grid-item">
+                            <h4 class="footer-heading">ABONELİK</h4>
+                            <p class="footer-text">
+                                Hemen abone ol ve gönderilerden ilk sen haberdar ol!
+                            </p>
+                            <div>
+                                <form class="form" asp-controller="Home" asp-action="Add" method="post">
+                                    <div class="form-top">
+                                        <input type="text" class="subscribe-field-name" name="Name" placeholder="İsim" maxlength="50" required>
+                                        <input type="text" class="subscribe-field-name" name="Surname" placeholder="Soyisim" maxlength="50" required>
+                                    </div>
+                                    <div class="form-bottom">
+                                        <input class="subscribe-field" maxlength="256" name="Email" placeholder="your e-mail" type="email" required>
+                                        <input type="submit" class="submit-button" value="subscribe">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="copyright">
+            <div class="copyright-text no-translate">
+                © 2024 Huzlab Made by Berkay Huz, Created by Berkay Huz
+            </div>
+        </div>
+    </div>
+    <div class="void"></div>
+</div>

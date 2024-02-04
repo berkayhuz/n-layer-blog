@@ -1,0 +1,29 @@
+﻿@model List<ArticleDto>
+
+@if (Model != null && Model.Any())
+{
+
+<section class="mixed-section">
+    <div class="main-container">
+        <div class="main-title">
+            <h2 class="main-title-heading">mixed</h2>
+            <div class="main-subtitle">exploring a tapestry of topics and ideas</div>
+        </div>
+        <div class="mixed-blog-list-wrapper">
+            <div role="list" class="mixed-blog-list">
+                    @foreach (var article in Model)
+                    {
+                    <div role="listitem">
+                            <a href="post/@article.Slug" class="mixed-blog-item">
+                            <div class="mixed-overlay"></div>
+                            <img alt="" src="~/Uploads/@(article.Image.FileName)" class="mixed-img">
+                            <div class="mixed-blog-category">@article.Title</div>
+                            <h4 class="mixed-blog-heading">@article.MiniDescription</h4>
+                        </a>
+                    </div>
+                    }
+            </div>
+        </div>
+    </div>
+</section>
+}

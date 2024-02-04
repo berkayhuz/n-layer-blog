@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    color: #000;
+    background-color: #dde7f5;
+    font-family: Montserrat, Space-Mono, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+    font-family: Montserrat, Space-Mono, sans-serif;
+}
+
+
+a {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.trn-3s{
+    transition: all .3s ease;
+}
+
+/**XXX**/
+
+
+.main-container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.error-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 200px 0;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    overflow:hidden;
+}
+
+    .error-container ion-icon {
+        font-size: 7rem;
+    }
+
+    .error-container h1 {
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .error-container p {
+        font-weight: 400;
+        width: 60%;
+        margin: auto;
+        line-height: 1.4;
+        font-size: 1rem;
+    }
+
+    .error-container a {
+        background-color: #252525;
+        width: max-content;
+        margin: auto;
+        color: #fff;
+        padding: 10px 1rem;
+        border-radius: .25rem;
+        border: 1px solid #252525;
+        font-size: 1rem;
+    }
+
+        .error-container a:hover {
+            background-color: transparent;
+            border: 1px solid #252525;
+            color: #252525;
+        }
+
+    .error-container * {
+        font-family: Space-Mono !important;
+    }
+
+
+.error-top {
+    width: 100%;
+    position: relative;
+}
+
+.error-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.error-header-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.error-header-link {
+    color: #252525;
+    font-family: Space-Mono !important;
+    text-decoration: none;
+}
+
+    .error-header-link:hover {
+        text-decoration: underline;
+    }
+
+
+.error-header-comp-logo {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    .error-header-comp-logo * {
+        width: 100%;
+        height: 40px !important;
+    }
+
+.error-footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+.header-menu-dropdown-user-profile-button-click,
+.profile-dashboard-home-user-image img {
+    background-color: #fff !important;
+}
+
+@media screen and (max-width:1480px) {
+    .error-container {
+        padding: 0 2rem;
+    }
+
+    .error-header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .error-header-comp-logo {
+        position: relative;
+        margin-top: -2rem;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .error-container ion-icon {
+        font-size: 4.9rem;
+    }
+
+    .error-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .error-container p {
+        font-size: 0.8rem;
+        width: 90%;
+    }
+
+    .error-container a {
+        font-size: 0.9rem;
+    }
+    .main-container {
+        max-width: 900px;
+    }
+}

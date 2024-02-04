@@ -1,0 +1,67 @@
+.light-mode-button {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 20px;
+    width: 50px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.light-mode-button:focus {
+    outline: none;
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+body[light-mode="dark"] {
+    background-color: #141516;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+    background-color: #ced4e2;
+    color: #141516;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(2) {
+    left: 30px;
+    background-color: #141516;
+}
+
+body[light-mode="dark"] .header-inner{
+    box-shadow: rgba(184, 184, 184, 0.2) 0px 7px 29px 0px !important;
+}
+
+.theme-select a.selected-theme {
+    background-color: #252525;
+    color: #fff;
+}
+
+@media screen and (max-width:900px){
+    .light-mode-button-web{
+        display: none;
+    }
+}

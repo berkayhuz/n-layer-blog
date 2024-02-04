@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Huzlab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Stable.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Translate.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Category/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Search/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Author/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/My/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Dark_Mode/darkmode.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Components/Header_User_Profile.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Font/Fonts.css" asp-append-version="true" />
+</head>
+<body style="background-color:#fff;">
+    <div class="error-header">
+        <div class="error-top">
+            <div class="error-header">
+                <div class="error-header-box">
+                    <a asp-action="Index" asp-area="" asp-controller="Home" class="error-header-link">Ana Sayfa</a>
+                    <a asp-action="" asp-area="" asp-controller="" class="error-header-link">Yardım ve Destek</a>
+                    <a asp-action="" asp-area="" asp-controller="" class="error-header-link">Hakkımızda</a>
+                </div>
+                <div class="error-header-box">
+                    <a asp-action="Index" asp-area="" asp-controller="Home" class="error-header-link">
+                        <div class="error-header-comp-logo">
+                            @await Html.PartialAsync("~/Views/Shared/Items/Logo.cshtml")
+                        </div>
+                    </a>
+                </div>
+                <div class="error-header-box">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @RenderBody()
+    <div class="profile-footer error-footer">
+        <div class="main-container">
+            <div class="profile-footer-box">
+                <div class="profile-footer-link" role="listbox">
+                    <div role="listitem" class="with-seperator">
+                        <a asp-controller="Policy" asp-action="privacy" asp-area="">Gizlilik Politikası</a>
+                        <div class="profile-footer-line"></div>
+                    </div>
+                    <div role="listitem" class="with-seperator">
+                        <a asp-controller="Policy" asp-action="termsandconditions" asp-area="">Hüküm ve Koşullar</a>
+                        <div class="profile-footer-line"></div>
+                    </div>
+                    <div role="listitem">
+                        <a href="#">Yardım ve Destek</a>
+                    </div>
+                </div>
+                <div class="profile-footer-link">
+                    <div role="listitem">
+                        <a>
+                            Copyright © 2024 Berkay Huz. Tüm hakları saklıdır.
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

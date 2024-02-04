@@ -1,0 +1,23 @@
+﻿@using HuzlabBlog.Service.Consts
+@{
+    ViewData["Title"] = "Error";
+    Layout = "_ErrorHandlingFilterLayout";
+}
+
+<div class="error-container">
+    <center><ion-icon name="warning-outline"></ion-icon></center>
+    <h1>Bu içerik şu anda kullanılamıyor</h1>
+    @if (User.IsInRole(RoleConsts.SuperAdmin) || User.IsInRole(RoleConsts.Admin))
+    {
+        <p>@ViewData["Exception"]</p>
+    }
+    else
+    {
+        <p>
+            Bunun gerçekleşmesinin nedeni genellikle sahibinin onu yalnızca küçük bir grup insanla paylaşması,
+            kimlerin görebileceğini değiştirmesi veya silinmiş olmasıdır.
+        </p>
+    }
+   
+    <a href="#">Yardım Merkezi</a>
+</div>

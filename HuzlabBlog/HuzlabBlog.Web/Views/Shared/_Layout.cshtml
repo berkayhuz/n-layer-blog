@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Huzlab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Footer.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Stable.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Translate.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Stable/Marquee.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Index/EditorChoosed/EditorChoosed.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Index/HomeCategory/Homecategory.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Index/Mixed/Mixed.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Index/RandomCategory/RandomCategory.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Index/UnderCategoryLastPosts/UnderCategoryLastPosts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Category/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Post/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Search/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/Author/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Page/My/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Dark_Mode/darkmode.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Components/Header_User_Profile.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Font/Fonts.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    @await Html.PartialAsync("~/Views/Shared/Includes/Navbar.cshtml")
+    @RenderBody()
+    @if (ViewContext.RouteData.Values["area"]?.ToString() == "My")
+    {
+        @await Html.PartialAsync("~/Views/Shared/Includes/MyFooter.cshtml")
+    }
+    else
+    {
+        @await Html.PartialAsync("~/Views/Shared/Includes/Footer.cshtml")
+    }
+    <script src="~/Blog/assets/Javascript/DarkMode/Translate.js" asp-append-version="true"></script>
+    <script src="~/Blog/assets/Javascript/DarkMode/darkmode.js" asp-append-version="true"></script>
+    <script src="~/Blog/assets/Javascript/HeaderMenu/Userprofile.js" asp-append-version="true"></script>
+    <script src="~/Blog/assets/Javascript/HeaderMenu/Headermenu.js" asp-append-version="true"></script>
+    <script src="~/Blog/assets/Javascript/Stable/Stable.js" asp-append-version="true"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <div id="notificationPopup" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc;">
+        <p id="notificationMessage">@TempData["NotificationMessage"]</p>
+    </div>
+
+    @if (ViewContext.RouteData.Values["area"]?.ToString() == "My" || ViewContext.RouteData.Values["controller"]?.ToString() == "Author" && ViewContext.RouteData.Values["action"]?.ToString() == "Profile")
+    {
+        <script>
+            document.addEventListener("click", function (event) {
+                acilanBoxes.forEach(function (box) {
+                    if (!box.contains(event.target)) {
+                        box.style.display = "none";
+                    }
+                });
+            });
+
+            var dropdownVisible = false;
+
+            function toggleDropdown(button) {
+                var dropdown = button.nextElementSibling;
+                var allDropdowns = document.querySelectorAll('.my-topbar-dropdown-content');
+
+                for (var i = 0; i < allDropdowns.length; i++) {
+                    var otherDropdown = allDropdowns[i];
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('my-topbar-show');
+                    }
+                }
+
+                dropdown.classList.toggle('my-topbar-show');
+            }
+
+            window.onclick = function (event) {
+                var dropdowns = document.querySelectorAll('.my-topbar-dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var dropdown = dropdowns[i];
+                    var button = dropdown.previousElementSibling;
+
+                    if (dropdownVisible && !event.target.matches('.my-topbar-dropdown-btn') && event.target !== button) {
+                        dropdown.classList.remove('my-topbar-show');
+                        dropdownVisible = false;
+                    }
+                }
+            }
+        </script> 
+    }
+    @if (ViewContext.RouteData.Values["area"]?.ToString() == "My" && ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" || ViewContext.RouteData.Values["controller"]?.ToString() == "Author" && ViewContext.RouteData.Values["action"]?.ToString() == "Profile")
+    {
+    <script>
+        function sil() {
+            document.getElementById("silPopup").style.display = "flex";
+        }
+        function silIptal() {
+            document.getElementById("silPopup").style.display = "none";
+        }
+
+        var links = document.querySelectorAll(".pdums-post-list-item-top-item-detail-link");
+        var acilanBoxes = document.querySelectorAll(".pdums-post-list-item-top-item-detail-buttons-dropdown-menu");
+
+        links.forEach(function (link, index) {
+            link.addEventListener("click", function (event) {
+                event.stopPropagation();
+                acilanBoxes.forEach(function (box, boxIndex) {
+                    if (index === boxIndex) {
+                        box.style.display = (box.style.display === "none") ? "flex" : "none";
+                    } else {
+                        box.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+    }
+    @if (User.Identity.IsAuthenticated)
+    {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var notificationMessage = "@TempData["NotificationMessage"]";
+                if (notificationMessage) {
+                    showPopup(notificationMessage);
+                }
+            });
+
+            function showPopup(message) {
+                document.getElementById("notificationPopup").style.display = "block";
+                document.getElementById("notificationMessage").innerHTML = message;
+
+                setTimeout(function () {
+                    document.getElementById("notificationPopup").style.display = "none";
+                }, 3000);
+            }
+        </script>
+        <script>
+            document.getElementById("tema-link").addEventListener("click", function () {
+                var elementLinks = document.querySelectorAll(".header-user-dropdown-theme-d-none");
+                var elementThemeBack = document.querySelectorAll(".theme-back");
+                var elementThemeSelects = document.querySelectorAll(".theme-select");
+
+                elementLinks.forEach(function (element) {
+                    element.classList.add("d-none");
+                });
+                elementThemeBack.forEach(function (element) {
+                    element.classList.remove("d-none");
+                });
+                elementThemeSelects.forEach(function (element) {
+                    element.classList.remove("d-none");
+                });
+            });
+            document.querySelectorAll(".theme-back").forEach(function (button) {
+                button.addEventListener("click", function () {
+
+                    button.classList.add("d-none");
+
+                    var elementsToShow = document.querySelectorAll(".header-user-dropdown-theme-d-none");
+                    var elementThemeSelects = document.querySelectorAll(".theme-select");
+                    elementsToShow.forEach(function (element) {
+                        element.classList.remove("d-none");
+                    });
+                    elementThemeSelects.forEach(function (element) {
+                        element.classList.add("d-none");
+                    });
+                });
+            });
+
+        </script>
+        @await Component.InvokeAsync("NToastNotify")
+    }
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

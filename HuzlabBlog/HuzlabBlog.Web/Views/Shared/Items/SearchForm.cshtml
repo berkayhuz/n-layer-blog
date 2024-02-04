@@ -1,0 +1,7 @@
+﻿<form asp-controller="Search" asp-area="" asp-action="Index" method="get" class="search-box search-box-web search-box-mobile">
+    <label>
+        <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+        <input type="text" id="query" name="query" required placeholder="type something" value="@ViewBag.Query">
+        <button type="submit">Search</button>
+    </label>
+</form>

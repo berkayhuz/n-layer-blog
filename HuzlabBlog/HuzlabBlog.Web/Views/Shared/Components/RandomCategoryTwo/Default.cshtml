@@ -1,0 +1,51 @@
+﻿@model RandomCategoryViewModel
+@if (Model != null && Model.Posts != null && Model.Posts.Any())
+{
+    <section class="random-category-section-2">
+        <div class="main-container">
+            <div class="main-title">
+                <h2 class="main-title-heading">@(Model.Category.Name)</h2>
+            </div>
+
+            <div class="random-category-stack">
+                <div class="single-random-post">
+                    <div class="single-random-wrapper">
+                        <div role="list" class="single-random-list">
+                            <div role="listitem">
+                                <a href="post/@(Model.Posts.FirstOrDefault()?.Slug)" class="single-random-item">
+                                    <img alt="Fotoğraf bulunamadı." loading="lazy"
+                                    src="~/Uploads/@(Model.Posts.FirstOrDefault()?.Image.FileName)"
+                                    class="single-random-image">
+                                    <div class="single-random-text-box">
+                                        <h2 class="single-random-heading">
+                                            @(Model.Posts.FirstOrDefault()?.Title)
+                                        </h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="multi-random-blog-posts">
+                    <div class="multi-random-list-wrapper">
+                        <div role="list" class="multi-random-list">
+                            @foreach (var article in Model.Posts.Skip(1))
+                            {
+                                <div role="listitem">
+                                    <a href="post/@article.Slug" class="multi-random-list-item">
+                                        <img alt="Fotoğraf bulunamadı." loading="lazy"
+                                        src="~/Uploads/@(article.Image.FileName)"
+                                        class="random-category-img">
+                                        <h4 class="multi-random-heading">@(article.Title)</h4>
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}

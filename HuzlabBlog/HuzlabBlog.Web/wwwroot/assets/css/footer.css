@@ -1,0 +1,49 @@
+﻿
+.huzlab-footer {
+    margin-top: 5rem;
+    padding: 80px 0;
+    background-color: var(--black);
+}
+
+.huzlab-footer-item-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.huzlab-footer .huzlab-description {
+    color: var(--white);
+    font-size: 0.8rem;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.huzlab-footer-link-title {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid #cbcbcb48;
+    padding-bottom: 5px;
+}
+
+.huzlab-footer-link-box {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.huzlab-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+    .huzlab-footer-links a {
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+.huzlab-footer-item:nth-child(2) {
+    display: flex;
+    gap: 4rem;
+}

@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "_LayoutNonAuth";
+}
+@model UserLoginDto
+<section class="auth-section">
+    <div class="auth-container">
+        <div class="content-container">
+            <div class="comp-logo-container">
+                <a href="#" class="comp-logo">
+                    @await Html.PartialAsync("~/Views/Shared/Items/Logo.cshtml")
+                </a>
+            </div>
+            <div class="comp-title">
+                <h1>Oku, yorum yap ve paylaş</h1>
+                <p>Yüzlerce ücretsiz makaleye erişmenize bir adım kaldı.</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <form asp-action="Login" asp-controller="Auth" id="formAuthentication" method="post">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="form-box">
+                            <div class="alert alert-danger" role="alert">
+                                @TempData["SuccessMessage"]
+                            </div>
+                        </div>
+                    }
+                    @if (ViewData["ErrorMessage"] != null)
+                    {
+                        <div class="form-box">
+                            <div class="alert alert-danger" role="alert">
+                                @ViewData["ErrorMessage"]
+                            </div>
+                        </div>
+                    }
+                <div class="form-box">
+                    <label>
+                        <div class="pass-area">
+                            <span>Email</span>
+                            <div id="EmailControl" class="text-info"></div>
+                        </div>
+                        <input asp-for="Email" id="emailInput" placeholder="Email" name="Email" class="text-field w-input" type="Email" maxlength="40" autofocus>
+                    </label>
+                </div>
+                <div class="form-box">
+                    <label>
+                        <div class="pass-area">
+                            <span>Parola</span>
+                            <div class="text-danger" id="passwordError"></div>
+                        </div>
+                        <input name="password" aria-describedby="password" maxlength="30" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" class="text-field w-input" asp-for="password" type="password" id="passwordInput">
+                    </label>
+                </div>
+                <div class="form-box">
+                    <input type="submit" class="form-submit" value="Giriş yap">
+                </div>
+                <div class="form-link">
+                    <div></div>
+                    <a asp-action="Register" asp-area="" asp-controller="Auth">Hesabın yok mu?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

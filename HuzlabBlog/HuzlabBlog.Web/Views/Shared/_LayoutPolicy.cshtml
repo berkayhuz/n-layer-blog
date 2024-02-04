@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Huzlab</title>
+    <link rel="stylesheet" href="~/Blog/assets/Style/Font/Fonts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Blog/assets/Style/Policy/Style.css" asp-append-version="true" />
+</head>
+<body>
+    <section class="policy-section">
+        <div class="policy-top">
+            <div class="policy-header">
+                <div class="policy-header-box">
+                    <a asp-action="Index" asp-area="" asp-controller="Home" class="policy-header-link">Ana Sayfa</a>
+                    <a asp-action="" asp-area="" asp-controller="" class="policy-header-link">Yardım ve Destek</a>
+                    <a asp-action="" asp-area="" asp-controller="" class="policy-header-link">Hakkımızda</a>
+                </div>
+                <div class="policy-header-box">
+                    <a href="#" class="policy-header-link">
+                        <div class="policy-header-comp-logo">
+                            @await Html.PartialAsync("~/Views/Shared/Items/LogoWhite.cshtml")
+                        </div>
+                    </a>
+                </div>
+                <div class="policy-header-box">
+                    <a asp-action="" asp-area="" asp-controller="" class="policy-header-contact-link">İletişim</a>
+                </div>
+                <div class="policy-header-mobile-box">
+                    <button><ion-icon name="menu-outline"></ion-icon></button>
+                </div>
+            </div>
+            <div class="policy-container">
+                <div class="policy-title">
+                    <h1>Yasal</h1>
+                    <div class="more-policies">
+                        <a asp-action="cookies" asp-controller="Policy" asp-area="">Çerezler</a>
+                        <a asp-action="termsandconditions" asp-controller="Policy" asp-area="">Hüküm ve Koşullar</a>
+                        <a asp-action="termofuse" asp-controller="Policy" asp-area="">Kullanım Koşulları</a>
+                        <a asp-action="bgys" asp-controller="Policy" asp-area="">BGYS</a>
+                        <a asp-action="kvkk" asp-controller="Policy" asp-area="">KVKK</a>
+                        <a asp-action="security" asp-controller="Policy" asp-area="">Güvenlik</a>
+                        <a asp-action="privacy" asp-controller="Policy" asp-area="">Gizlilik</a>
+                        <a asp-action="intellectualproperty" asp-controller="Policy" asp-area="">Fikri Mülkiyet Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @RenderBody()
+    </section>
+    <div class="profile-footer">
+        <div class="policy-container">
+            <div class="profile-footer-box">
+                <div class="profile-footer-link" role="listbox">
+                    <div role="listitem" class="with-seperator">
+                        <a href="#">Ana Sayfa</a>
+                        <div class="profile-footer-line"></div>
+                    </div>
+                    <div role="listitem" class="with-seperator">
+                        <a asp-action="" asp-area="" asp-controller="">İletişim</a>
+                        <div class="profile-footer-line"></div>
+                    </div>
+                    <div role="listitem" class="with-seperator">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-action="Index" asp-area="My" asp-controller="Home">Profil</a>
+                        }
+                        else
+                        {
+                            <a asp-action="Login" asp-area="" asp-controller="Auth">Giriş Yap</a>
+                        }
+                    </div>
+                </div>
+                <div class="profile-footer-link">
+                    <div role="listitem">
+                        <a>
+                            Copyright © 2024 Berkay Huz. Tüm hakları saklıdır.
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
